@@ -15,10 +15,8 @@ namespace Order
             List<PastryOrder> Pastries = new List<PastryOrder>(){};
             PastryOrder myPastry = new PastryOrder();
             myPastry.Game();
-            int totalPrice = myPastry.GetCount() * myPastry.GetCost() + myBread.GetCount() + myBread.GetCost();
-            Console.Write(totalPrice);
-
-           
+            // int totalPrice = myPastry.GetCount() * myPastry.GetCost() + myBread.GetCount() + myBread.GetCost();
+            // Console.Write("Your Order Total is  " + totalPrice + " Dollars");          
         }
     }
 }
