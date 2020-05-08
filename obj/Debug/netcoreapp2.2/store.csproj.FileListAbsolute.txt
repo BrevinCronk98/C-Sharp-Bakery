@@ -1,0 +1,12 @@
+C:\Users\cronk\desktop\c-sharp-bakery\obj\Debug\netcoreapp2.2\store.csprojAssemblyReference.cache
+C:\Users\cronk\desktop\c-sharp-bakery\obj\Debug\netcoreapp2.2\store.csproj.CoreCompileInputs.cache
+C:\Users\cronk\desktop\c-sharp-bakery\obj\Debug\netcoreapp2.2\store.AssemblyInfoInputs.cache
+C:\Users\cronk\desktop\c-sharp-bakery\obj\Debug\netcoreapp2.2\store.AssemblyInfo.cs
+C:\Users\cronk\desktop\c-sharp-bakery\bin\Debug\netcoreapp2.2\store.deps.json
+C:\Users\cronk\desktop\c-sharp-bakery\bin\Debug\netcoreapp2.2\store.runtimeconfig.json
+C:\Users\cronk\desktop\c-sharp-bakery\bin\Debug\netcoreapp2.2\store.runtimeconfig.dev.json
+C:\Users\cronk\desktop\c-sharp-bakery\bin\Debug\netcoreapp2.2\store.dll
+C:\Users\cronk\desktop\c-sharp-bakery\bin\Debug\netcoreapp2.2\store.pdb
+C:\Users\cronk\desktop\c-sharp-bakery\obj\Debug\netcoreapp2.2\store.dll
+C:\Users\cronk\desktop\c-sharp-bakery\obj\Debug\netcoreapp2.2\store.pdb
+C:\Users\cronk\desktop\c-sharp-bakery\obj\Debug\netcoreapp2.2\store.genruntimeconfig.cache
