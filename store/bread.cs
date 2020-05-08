@@ -9,10 +9,13 @@ namespace Order.Bread
         private string _breadOne;
         private string _breadTwo;
         private string _breadThree;
+        private string _breadType;
         private int _costOne;
         private int _costTwo;
         private int _costThree;
-        private int _count;
+        private int _countOne;
+        private int _countTwo;
+        private int _countThree;
         private int _totalCost;
 
         public BreadOrder()
@@ -56,28 +59,31 @@ namespace Order.Bread
         {
             Console.WriteLine("Here is our Esteemed Bread Selection!: " + _breadOne + " is " + _costOne + " Dollars, " + _breadTwo + " is " + _costTwo + " Dollars, " + _breadThree + " is " +  _costThree + " Dollars.." );
             int num = 1;
-            bool answer = yes.Equals("y", StringComparison.OridinalIgnoreCase);
+            
             for(int i = 0; i < num; i ++)
-            {
-            Console.WriteLine("What Type of Bread Would You Like?");
-            _breadType = Console.ReadLine();
-            Console.WriteLine("You Chose " + _breadType + ",  Do You Want to Order More? Press Y for Yes, and N for No");
-            string yes = Console.ReadLine();
-            if(answer == true)
             {
                 Console.WriteLine("What Type of Bread Would You Like?");
                 _breadType = Console.ReadLine();
                 Console.WriteLine("You Chose " + _breadType + ",  Do You Want to Order More? Press Y for Yes, and N for No");
-            }
-            else
-            {
-                break;
-            }
-            i++;
-            }
-          
-           
-        }     
-    }
-    
+                string yes = Console.ReadLine();
+                bool answer = yes.Equals("Y", StringComparison.OrdinalIgnoreCase);
+                while(answer == true)
+                {
+                    Console.WriteLine("What Type of Bread Would You Like?");
+                    _breadType = Console.ReadLine();
+                    Console.WriteLine("You Chose " + _breadType + ",  Do You Want to Order More? Press Y for Yes, and N for No");
+                    string loopCheck = Console.ReadLine();
+                   
+                    if(loopCheck != yes)
+                    {
+                        break;
+                    } else
+                    {
+                        i++;
+                    }
+                } 
+            }   
+             
+        }
+    }  
 }
