@@ -62,16 +62,63 @@ namespace Order.Bread
             
             for(int i = 0; i < num; i ++)
             {
-                Console.WriteLine("What Type of Bread Would You Like?");
-                _breadType = Console.ReadLine();
-                Console.WriteLine("You Chose " + _breadType + ",  Do You Want to Order More? Press Y for Yes, and N for No");
+                Console.WriteLine("What Type of Bread Would You Like? To Make it Simple for you Guys, Press 1 for White Bread, Press 2 for French Bread, or Press 3 for Elven Bread, oooo");
+                string choice = Console.ReadLine();
+                if(choice == "1")
+                {
+                    _breadType = _breadOne;
+                    Console.WriteLine("How Many " + _breadType +" Would You Like");
+                    int _countOne = int.Parse(Console.ReadLine());
+                    Console.WriteLine("You Want " + _countOne + " " + _breadType);
+                } else if(choice == "2")
+                {
+                    _breadType = _breadTwo;
+                    Console.WriteLine("How Many " + _breadType +" Would You Like");
+                    int _countTwo = int.Parse(Console.ReadLine());
+                    Console.WriteLine("You Want " + _countTwo + " " + _breadType);
+                } else if( choice == "3")
+                {
+                    _breadType = _breadThree;
+                    Console.WriteLine("How Many " + _breadType +" Would You Like");
+                    int _countThree = int.Parse(Console.ReadLine());
+                    Console.WriteLine("You Want " + _countThree + " " + _breadType);
+                } else
+                {
+                    Console.WriteLine("We Dont Have That Bread Thanks for Checking for Errors");
+                }
+
+                
+                Console.WriteLine("Do You Want to Order More? Press Y for Yes, and N for No");
                 string yes = Console.ReadLine();
                 bool answer = yes.Equals("Y", StringComparison.OrdinalIgnoreCase);
                 while(answer == true)
                 {
                     Console.WriteLine("What Type of Bread Would You Like?");
-                    _breadType = Console.ReadLine();
-                    Console.WriteLine("You Chose " + _breadType + ",  Do You Want to Order More? Press Y for Yes, and N for No");
+                    string loopChoice = Console.ReadLine();
+                    if(loopChoice == "1")
+                    {
+                        _breadType = _breadOne;
+                         Console.WriteLine("How Many  " + _breadType +" Would You Like");
+                        int _countOne = int.Parse(Console.ReadLine());
+                        Console.WriteLine("You Want " + _countOne + " " + _breadType);
+                    } else if(loopChoice == "2")
+                    {
+                        _breadType = _breadTwo;
+                        Console.WriteLine("How Many  " + _breadType +" Would You Like");
+                        int _countTwo = int.Parse(Console.ReadLine());
+                        Console.WriteLine("You Want " + _countTwo + " " + _breadType);
+                    } else if( loopChoice == "3")
+                    {
+                        _breadType = _breadThree;
+                        Console.WriteLine("How Many  " + _breadType +" Would You Like");
+                        int _countThree = int.Parse(Console.ReadLine());
+                        Console.WriteLine("You Want " + _countThree + " " + _breadType);
+                    } else
+                    {
+                        Console.WriteLine("We Dont Have That Bread Thanks for Checking for Errors");
+                    }
+
+                    Console.WriteLine("Do You Want to Order More? Press Y for Yes, and N for No");
                     string loopCheck = Console.ReadLine();
                    
                     if(loopCheck != yes)
