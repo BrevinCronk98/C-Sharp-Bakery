@@ -20,11 +20,14 @@ namespace Order.Bread
             _breadOne = "White Bread";
             _breadTwo = "French Bread";
             _breadThree = "Elven Bread";
+            _breadType = "White Bread";
             _costOne = 3;
             _costTwo = 4;
             _costThree = 780;
             _totalCost = 0;
-            _count = 0;   
+            _countOne = 0;  
+            _countTwo = 0;
+            _countThree = 0; 
         }
         public string GetBreadOne()
         {
@@ -52,10 +55,29 @@ namespace Order.Bread
         private void OnStart()
         {
             Console.WriteLine("Here is our Esteemed Bread Selection!: " + _breadOne + " is " + _costOne + " Dollars, " + _breadTwo + " is " + _costTwo + " Dollars, " + _breadThree + " is " +  _costThree + " Dollars.." );
-            Console.WriteLine("How Many Pieces of Bread Would You Like?");
-            _count = int.Parse(Console.ReadLine());
-            Console.WriteLine("You would like " + _count + " Pieces of Bread");
-        }
+            int num = 1;
+            bool answer = yes.Equals("y", StringComparison.OridinalIgnoreCase);
+            for(int i = 0; i < num; i ++)
+            {
+            Console.WriteLine("What Type of Bread Would You Like?");
+            _breadType = Console.ReadLine();
+            Console.WriteLine("You Chose " + _breadType + ",  Do You Want to Order More? Press Y for Yes, and N for No");
+            string yes = Console.ReadLine();
+            if(answer == true)
+            {
+                Console.WriteLine("What Type of Bread Would You Like?");
+                _breadType = Console.ReadLine();
+                Console.WriteLine("You Chose " + _breadType + ",  Do You Want to Order More? Press Y for Yes, and N for No");
+            }
+            else
+            {
+                break;
+            }
+            i++;
+            }
+          
+           
+        }     
     }
     
 }
