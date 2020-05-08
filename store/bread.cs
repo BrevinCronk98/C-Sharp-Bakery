@@ -75,13 +75,13 @@ namespace Order.Bread
                 {
                     _breadType = _breadTwo;
                     Console.WriteLine("How Many " + _breadType +" Would You Like");
-                    int _countTwo = int.Parse(Console.ReadLine());
+                    _countTwo = int.Parse(Console.ReadLine());
                    
                 } else if( choice == "3")
                 {
                     _breadType = _breadThree;
                     Console.WriteLine("How Many " + _breadType +" Would You Like");
-                    int _countThree = int.Parse(Console.ReadLine());
+                    _countThree = int.Parse(Console.ReadLine());
                    
                 } else
                 {
@@ -100,19 +100,19 @@ namespace Order.Bread
                     {
                         _breadType = _breadOne;
                          Console.WriteLine("How Many  " + _breadType +" Would You Like");
-                        int _countOne = int.Parse(Console.ReadLine());
+                        _countOne = int.Parse(Console.ReadLine());
                        
                     } else if(loopChoice == "2")
                     {
                         _breadType = _breadTwo;
                         Console.WriteLine("How Many  " + _breadType +" Would You Like");
-                        int _countTwo = int.Parse(Console.ReadLine());
+                        _countTwo = int.Parse(Console.ReadLine());
                        
                     } else if( loopChoice == "3")
                     {
                         _breadType = _breadThree;
                         Console.WriteLine("How Many  " + _breadType +" Would You Like");
-                        int _countThree = int.Parse(Console.ReadLine());
+                        _countThree = int.Parse(Console.ReadLine());
                     
                     } else
                     {
@@ -135,8 +135,9 @@ namespace Order.Bread
         }
         private void TotalPrice()
         {
-            _totalCost = _countOne * _costOne + _countTwo * _costTwo + _countThree * _costThree;
-            Console.WriteLine(_totalCost);
+            
+            int _totalCost = _countOne * _costOne + _countTwo * _costTwo + _countThree * _costThree;
+            Console.WriteLine("Your Order Total " + _totalCost + " Dollars");
         }
     }  
 }
