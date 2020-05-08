@@ -144,7 +144,7 @@ namespace Order.Bread
         {
             
             int _totalCost = _countOne * _costOne + _countTwo * _costTwo + _countThree * _costThree;
-            Console.WriteLine("Your order so far is" + _totalCost + " Dollars");
+            Console.WriteLine("Your order so far is " + _totalCost + " Dollars");
         }
     }  
 }
