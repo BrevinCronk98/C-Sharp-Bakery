@@ -1,5 +1,6 @@
 using System;
 
+
 namespace Order.Pastry
 {
     public class PastryOrder
@@ -22,18 +23,19 @@ namespace Order.Pastry
         {
             return _cost;
         }
+        
+        public int GetCount()
+        {
+            return _count;
+        }
 
 
-        public void StartGame()
+        public void Game()
         {
             OnStart();
         }
 
-        public void RunApp()
-        {
-            
-        }
-
+       
         private void OnStart()
         {
             Console.WriteLine("We Offer " + _name + "es  For The Price of " + _cost + " Dollars Each" );

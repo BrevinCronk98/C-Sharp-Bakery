@@ -1,4 +1,5 @@
 using System;
+using Order.Pastry;
 
 
 namespace Order.Bread
@@ -28,11 +29,13 @@ namespace Order.Bread
             return _count;
         }
 
-        
-        public void StartGame()
+        public void Game()
         {
            OnStart();
         }
+
+
+
 
         private void OnStart()
         {
