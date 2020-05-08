@@ -53,6 +53,7 @@ namespace Order.Bread
         public void Game()
         {
            OnStart();
+           TotalPrice();
         }
 
         private void OnStart()
@@ -68,20 +69,20 @@ namespace Order.Bread
                 {
                     _breadType = _breadOne;
                     Console.WriteLine("How Many " + _breadType +" Would You Like");
-                    int _countOne = int.Parse(Console.ReadLine());
-                    Console.WriteLine("You Want " + _countOne + " " + _breadType);
+                     _countOne = int.Parse(Console.ReadLine());
+                   
                 } else if(choice == "2")
                 {
                     _breadType = _breadTwo;
                     Console.WriteLine("How Many " + _breadType +" Would You Like");
                     int _countTwo = int.Parse(Console.ReadLine());
-                    Console.WriteLine("You Want " + _countTwo + " " + _breadType);
+                   
                 } else if( choice == "3")
                 {
                     _breadType = _breadThree;
                     Console.WriteLine("How Many " + _breadType +" Would You Like");
                     int _countThree = int.Parse(Console.ReadLine());
-                    Console.WriteLine("You Want " + _countThree + " " + _breadType);
+                   
                 } else
                 {
                     Console.WriteLine("We Dont Have That Bread Thanks for Checking for Errors");
@@ -100,19 +101,19 @@ namespace Order.Bread
                         _breadType = _breadOne;
                          Console.WriteLine("How Many  " + _breadType +" Would You Like");
                         int _countOne = int.Parse(Console.ReadLine());
-                        Console.WriteLine("You Want " + _countOne + " " + _breadType);
+                       
                     } else if(loopChoice == "2")
                     {
                         _breadType = _breadTwo;
                         Console.WriteLine("How Many  " + _breadType +" Would You Like");
                         int _countTwo = int.Parse(Console.ReadLine());
-                        Console.WriteLine("You Want " + _countTwo + " " + _breadType);
+                       
                     } else if( loopChoice == "3")
                     {
                         _breadType = _breadThree;
                         Console.WriteLine("How Many  " + _breadType +" Would You Like");
                         int _countThree = int.Parse(Console.ReadLine());
-                        Console.WriteLine("You Want " + _countThree + " " + _breadType);
+                    
                     } else
                     {
                         Console.WriteLine("We Dont Have That Bread Thanks for Checking for Errors");
@@ -128,9 +129,14 @@ namespace Order.Bread
                     {
                         i++;
                     }
+                    
                 } 
-            }   
-             
+            }        
+        }
+        private void TotalPrice()
+        {
+            _totalCost = _countOne * _costOne + _countTwo * _costTwo + _countThree * _costThree;
+            Console.WriteLine(_totalCost);
         }
     }  
 }
