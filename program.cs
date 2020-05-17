@@ -9,6 +9,7 @@ namespace Order
     {
         public static void Main()
         {
+            // Bread Class Call
             List<BreadOrder> Breads = new List<BreadOrder>(){};
             BreadOrder myBread = new BreadOrder();
             
@@ -25,33 +26,28 @@ namespace Order
             for(int i = 0; i < num; i ++)
             {
                 start:
-
                 Console.WriteLine("What Type of Bread Would You Like? To Make it Simple for you Guys, Press 1 for White Bread, Press 2 for French Bread, or Press 3 for Elven Bread, oooo");
                 string choice = Console.ReadLine();
                 if(choice == "1")
                 {
                     breadType = myBread.GetBreadOne();
                     Console.WriteLine("How Many Slices of " + myBread.GetBreadType() +" Would You Like");
-                   countOne = int.Parse(Console.ReadLine());
-                   
+                    countOne = myBread.SetCountOne(int.Parse(Console.ReadLine()));
                 } else if(choice == "2")
                 {
                     breadType = myBread.GetBreadTwo();
                     Console.WriteLine("How Many Slices of " + myBread.GetBreadType() +" Would You Like");
-                    countTwo = int.Parse(Console.ReadLine());
-                   
+                    countTwo = myBread.SetCountTwo(int.Parse(Console.ReadLine()));  
                 } else if( choice == "3")
                 {
                     breadType = myBread.GetBreadThree();
                     Console.WriteLine("How Many Slices of " + myBread.GetBreadType() +" Would You Like");
-                    countThree = int.Parse(Console.ReadLine());
-                   
+                    countThree = myBread.SetCountThree(int.Parse(Console.ReadLine())); 
                 } else
                 {
                     Console.WriteLine("We Dont Have That Bread Thanks for Checking for Errors");
                 }
 
-                
                 Console.WriteLine("Do You Want to Order More? Press Y for Yes, and N for No");
                 string yes = Console.ReadLine().ToLower();
                 if( yes == "y" || yes == "yes")
@@ -61,21 +57,19 @@ namespace Order
                 {
                     break;
                 }
-                
-
             }
-            
+
             Breads.Add(myBread);
             
             
-            List<PastryOrder> Pastries = new List<PastryOrder>(){};
-            PastryOrder myPastry = new PastryOrder();
-            myPastry.Game();
-            Pastries.Add(myPastry);
+            // List<PastryOrder> Pastries = new List<PastryOrder>(){};
+            // PastryOrder myPastry = new PastryOrder();
+            // myPastry.Game();
+            // Pastries.Add(myPastry);
             
-            int TotalCostBread = myBread.GetCountOne() * myBread.GetCostOne() + myBread.GetCountTwo() * myBread.GetCostTwo() + myBread.GetCountThree() * myBread.GetCostThree();
-            int TotalCostPastry =  myPastry.GetCountOne() * myPastry.GetCostOne() + myPastry.GetCountTwo() * myPastry.GetCostTwo() + myPastry.GetCountThree() * myPastry.GetCostThree();
-            int FinalCost = TotalCostBread + TotalCostPastry;
+            int TotalCostBread = myBread.TotalPrice();
+            // int TotalCostPastry =  myPastry.GetCountOne() * myPastry.GetCostOne() + myPastry.GetCountTwo() * myPastry.GetCostTwo() + myPastry.GetCountThree() * myPastry.GetCostThree();
+            int FinalCost = TotalCostBread;
             Console.WriteLine( "Your Order Total is " + FinalCost + " Dollars.");
         }
     }

@@ -74,18 +74,30 @@ namespace Order.Bread
         {
             return _countThree;
         }
+        public int SetCountOne(int countOne)
+        {
+            return _countOne = countOne;
+        }
+        public int SetCountTwo(int countTwo)
+        {
+           return  _countTwo = countTwo;
+        }
+        public int SetCountThree(int countThree)
+        {
+           return  _countThree = countThree;
+        }
        
         public void Game()
         {
-           OnStart();
-           TotalPrice();
+        //    OnStart();
+        //    TotalPrice();
         }
 
-        private void TotalPrice()
+        public int TotalPrice()
         {
             
             int _totalCost = _countOne * _costOne + _countTwo * _costTwo + _countThree * _costThree;
-            Console.WriteLine("Your order so far is " + _totalCost + " Dollars");
+            return _totalCost;
         }
     }  
 }
