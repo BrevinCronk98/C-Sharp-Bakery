@@ -11,30 +11,40 @@ namespace Order
         {
             List<BreadOrder> Breads = new List<BreadOrder>(){};
             BreadOrder myBread = new BreadOrder();
-            Console.WriteLine("Here is our Esteemed Bread Selection!: " + _breadOne + " is " + _costOne + " Dollars, " + _breadTwo + " is " + _costTwo + " Dollars, " + _breadThree + " is " +  _costThree + " Dollars.." );
+            
+            // Bread Class Variables
+            string breadType = myBread.GetBreadType();
+            int countOne = myBread.GetCountOne();
+            int countTwo = myBread.GetCountTwo();
+            int countThree = myBread.GetCountThree();
+            
+            // Bread Program Sequence
+            Console.WriteLine("Here is our Esteemed Bread Selection!: " + myBread.GetBreadOne() + " is " + myBread.GetCostOne() + " Dollars, " + myBread.GetBreadTwo() + " is " + myBread.GetCostTwo() + " Dollars, " + myBread.GetBreadThree() + " is " +  myBread.GetCostThree() + " Dollars.." );
             int num = 1;
             
             for(int i = 0; i < num; i ++)
             {
+                start:
+
                 Console.WriteLine("What Type of Bread Would You Like? To Make it Simple for you Guys, Press 1 for White Bread, Press 2 for French Bread, or Press 3 for Elven Bread, oooo");
                 string choice = Console.ReadLine();
                 if(choice == "1")
                 {
-                    _breadType = _breadOne;
-                    Console.WriteLine("How Many Slices of " + _breadType +" Would You Like");
-                     _countOne = int.Parse(Console.ReadLine());
+                    breadType = myBread.GetBreadOne();
+                    Console.WriteLine("How Many Slices of " + myBread.GetBreadType() +" Would You Like");
+                   countOne = int.Parse(Console.ReadLine());
                    
                 } else if(choice == "2")
                 {
-                    _breadType = _breadTwo;
-                    Console.WriteLine("How Many Slices of " + _breadType +" Would You Like");
-                    _countTwo = int.Parse(Console.ReadLine());
+                    breadType = myBread.GetBreadTwo();
+                    Console.WriteLine("How Many Slices of " + myBread.GetBreadType() +" Would You Like");
+                    countTwo = int.Parse(Console.ReadLine());
                    
                 } else if( choice == "3")
                 {
-                    _breadType = _breadThree;
-                    Console.WriteLine("How Many Slices of " + _breadType +" Would You Like");
-                    _countThree = int.Parse(Console.ReadLine());
+                    breadType = myBread.GetBreadThree();
+                    Console.WriteLine("How Many Slices of " + myBread.GetBreadType() +" Would You Like");
+                    countThree = int.Parse(Console.ReadLine());
                    
                 } else
                 {
@@ -43,8 +53,18 @@ namespace Order
 
                 
                 Console.WriteLine("Do You Want to Order More? Press Y for Yes, and N for No");
-                string yes = Console.ReadLine();
+                string yes = Console.ReadLine().ToLower();
+                if( yes == "y" || yes == "yes")
+                {
+                    goto start;
+                } else
+                {
+                    break;
+                }
+                
+
             }
+            
             Breads.Add(myBread);
             
             
