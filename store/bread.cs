@@ -9,13 +9,12 @@ namespace Order.Bread
         private string _breadOne;
         private string _breadTwo;
         private string _breadThree;
-        private string _breadType;
         private int _costOne;
         private int _costTwo;
         private int _costThree;
-        private int _countOne;
-        private int _countTwo;
-        private int _countThree;
+        private int _countOneB;
+        private int _countTwoB;
+        private int _countThreeB;
         private int _totalCost;
 
         public BreadOrder()
@@ -23,80 +22,89 @@ namespace Order.Bread
             _breadOne = "White Bread";
             _breadTwo = "French Bread";
             _breadThree = "Elven Bread";
-            _breadType = "White Bread";
-            _costOne = 3;
-            _costTwo = 4;
+            _costOne = 4;
+            _costTwo = 6;
             _costThree = 780;
             _totalCost = 0;
-            _countOne = 0;  
-            _countTwo = 0;
-            _countThree = 0; 
+            _countOneB = 0;  
+            _countTwoB = 0;
+            _countThreeB = 0; 
         }
 
+        
         public string GetBreadOne()
         {
             return _breadOne;
         }
+        
         public string GetBreadTwo()
         {
             return _breadTwo;
         }
+        
         public string GetBreadThree()
         {
             return _breadThree;
         }
 
-        public string GetBreadType()
-        {
-            return _breadType;
-        }
         public int GetCostOne()
         {
             return _costOne;
         }
+        
         public int GetCountOne()
         {
-            return _countOne;
+            return _countOneB;
         }
         public int  GetCostTwo()
         {
             return _costTwo;
         }
+        
         public int GetCountTwo()
         {
-            return _countTwo;
+            return _countTwoB;
         }
+        
         public int GetCostThree()
         {
             return _costThree;
         }
+        
         public int GetCountThree()
         {
-            return _countThree;
+            return _countThreeB;
         }
-        public int SetCountOne(int countOne)
+        
+        public int SetCountOne(int countOneB)
         {
-            return _countOne = countOne;
+            return _countOneB = countOneB;
         }
-        public int SetCountTwo(int countTwo)
+        
+        public int SetCountTwo(int countTwoB)
         {
-           return  _countTwo = countTwo;
+           return  _countTwoB = countTwoB;
         }
-        public int SetCountThree(int countThree)
+        
+        public int SetCountThree(int countThreeB)
         {
-           return  _countThree = countThree;
-        }
-       
-        public void Game()
-        {
-        //    OnStart();
-        //    TotalPrice();
+           return  _countThreeB = countThreeB;
         }
 
         public int TotalPrice()
         {
-            
-            int _totalCost = _countOne * _costOne + _countTwo * _costTwo + _countThree * _costThree;
+            int _totalCost;
+            if(_countOneB >= 2)
+            {
+                 _costOne = 2;
+            } else if (_countTwoB >= 2)
+            {
+                 _costTwo = 3;
+            } else if (_countThreeB >= 2)
+            {
+                 _costThree = 390;
+            }
+             _totalCost = _countOneB * _costOne + _countTwoB * _costTwo + _countThreeB * _costThree;
             return _totalCost;
         }
     }  
