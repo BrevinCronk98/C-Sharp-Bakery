@@ -35,6 +35,8 @@
 * Input : "3 White Bread, # Jedi Pastries."
 * Output: "Your Total Price is 1576 Dollars."
 
+#### User Gets a 50% Discount on Item if They Get 2 or More
+
 ## Technologies Used
 
 * C#
