@@ -6,7 +6,7 @@
 
 ## Description
 
-#### _ The purpose of this application was to demonstrate my knowledge and understanding of intro C#. The program allows users to order multiple types of food at different quantitiies and then returns their order total._
+#### The purpose of this application was to demonstrate my knowledge and understanding of intro C#. The program allows users to order multiple types of food at different quantitiies and then returns their order total.
 
 ## Setup/Installation Requirements
 
@@ -32,10 +32,12 @@
 * Output: "You Choose Jedi Pastry, costs 501 Dollars."
 
 #### User Can See Their Total Price For The Order:
-* Input : "3 White Bread, # Jedi Pastries."
+* Input : "3 White Bread, 3 Jedi Pastries."
 * Output: "Your Total Price is 1576 Dollars."
 
 #### User Gets a 50% Discount on Item if They Get 2 or More
+* Input: "2 White Bread"
+* Output: "4 Dollars"
 
 ## Technologies Used
 
