@@ -2,7 +2,7 @@
 
 #### _At Brevins Famous Bakery, users have the ability to choose between pastries, and bread. The user can order multiple types of different bread and pastries and see their order total when they checkout! May 5th, 2020_
 
-#### By Brevin Cronk_
+#### By _Brevin Cronk_
 
 ## Description
 
